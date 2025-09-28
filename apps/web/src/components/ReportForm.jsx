@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import Map, { Marker, Popup, Source, Layer } from "react-map-gl";
 
 export default function ReportForm() {
   const [reporterName, setReporterName] = useState('');
