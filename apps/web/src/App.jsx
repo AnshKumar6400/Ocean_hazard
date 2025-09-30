@@ -1,21 +1,22 @@
-import React from 'react';
-import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
-import ReportForm from './components/ReportForm';
-import ReportMap from './components/ReportMap';
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import ReportForm from "./components/ReportForm";
+import ReportMap from "./components/ReportMap";
+import Navbar from "./components/Navbar";
+
 function App() {
   return (
     <Router>
-      <div>
-        {/* Simple navigation */}
-        <nav className="p-4 bg-gray-200 flex gap-4">
-          <Link to="/">Submit Report</Link>
-          <Link to="/map">View Map</Link>
-        </nav>
-
-        <Routes>
-          <Route path="/" element={<ReportForm />} />
-          <Route path="/map" element={<ReportMap />} />
-        </Routes>
+      <div className="min-h-screen flex flex-col">
+        <Navbar />
+        <main className="flex-1 p-4">
+          <Routes>
+            <Route path="/" element={<ReportForm />} />
+            <Route path="/map" element={<ReportMap />} />
+            {/* Auth routes */}
+            <Route path="/login" element={<h1>Login Page</h1>} />
+            <Route path="/signup" element={<h1>Signup Page</h1>} />
+          </Routes>
+        </main>
       </div>
     </Router>
   );
