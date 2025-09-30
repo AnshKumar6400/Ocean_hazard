@@ -553,19 +553,19 @@ const ReportMap = () => {
       `}</style>
 
       {/* Header */}
-      <div className="bg-blue-600 text-white p-4">
+      <div className="bg-emerald-600 text-white p-4">
         <div className="flex justify-between items-center">
-          <h1 className="text-xl font-bold">🗺️ Civic Reports - Hotspot Geofencing</h1>
+          <h1 className="text-xl font-bold"> Civic Reports - Hotspot Geofencing</h1>
           <div className="flex gap-4 items-center">
             <button 
               onClick={refreshReports}
-              className="bg-blue-500 px-4 py-2 rounded hover:bg-blue-700 transition-colors flex items-center gap-2"
+              className="bg-emerald-500 px-4 py-2 rounded hover:bg-emerald-700 transition-colors flex items-center gap-2"
               disabled={loading}
             >
-              {loading ? "🔄" : "🔄"} Refresh
+             Refresh
             </button>
             <div className="text-sm">
-              🚨 Hotspots: {hotspots.length} | 📍 Reports: {reports.length}
+               Hotspots: {hotspots.length} |  Reports: {reports.length}
             </div>
             {notifications.length > 0 && (
               <div className="bg-red-500 text-white px-3 py-1 rounded-full text-sm font-bold animate-pulse">
@@ -655,7 +655,7 @@ const ReportMap = () => {
             {hotspots.length > 0 && (
               <div className="mb-6">
                 <h3 className="text-md font-semibold text-red-600 mb-3 flex items-center gap-2">
-                  🚨 Active Hotspots ({hotspots.length})
+                   Active Hotspots ({hotspots.length})
                 </h3>
                 <div className="space-y-3">
                   {hotspots.map(hotspot => (
@@ -790,19 +790,19 @@ const ReportMap = () => {
             <h4 className="text-sm font-semibold mb-2">🗺️ Map Info</h4>
             <div className="space-y-1 text-xs">
               <div className="flex justify-between">
-                <span>🚨 Hotspots:</span>
+                <span> Hotspots:</span>
                 <span className="font-bold text-red-600">{hotspots.length}</span>
               </div>
               <div className="flex justify-between">
-                <span>📍 Individual Reports:</span>
+                <span> Individual Reports:</span>
                 <span className="font-bold text-blue-600">{unclusteredReports.length}</span>
               </div>
               <div className="flex justify-between">
-                <span>⚠️ Active Alerts:</span>
+                <span> Active Alerts:</span>
                 <span className="font-bold text-yellow-600">{notifications.length}</span>
               </div>
               <div className="flex justify-between">
-                <span>📊 Total Reports:</span>
+                <span> Total Reports:</span>
                 <span className="font-bold">{reports.length}</span>
               </div>
               {userLocation && (
